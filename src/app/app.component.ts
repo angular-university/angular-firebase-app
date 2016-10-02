@@ -1,13 +1,14 @@
-import {Component} from "@angular/core";
+import {Component} from '@angular/core';
+import {AngularFire, FirebaseListObservable, FirebaseObjectObservable} from "angularfire2";
 
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Final Project ongoing !';
 
+    title = 'app works!';
 
 }
