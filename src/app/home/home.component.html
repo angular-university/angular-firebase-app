@@ -6,6 +6,6 @@
 
 <div class="lessons-list-container v-h-center-block-parent">
 
-    <lessons-list [lessons]="filtered"></lessons-list>
+    <lessons-list *ngIf="filtered" [lessons]="filtered"></lessons-list>
 
 </div>
