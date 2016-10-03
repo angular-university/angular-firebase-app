@@ -10,10 +10,14 @@
         <button (click)="next()">Next Page</button>
     </div>
 
-    <lessons-list *ngIf="lessons" [lessons]="lessons" (lesson)="navigateToLesson($event)"></lessons-list>
+    <lessons-list *ngIf="lessons" [lessons]="lessons"
+                  (lesson)="navigateToLesson($event)"></lessons-list>
 
     <div class="tools-bar">
-        <button >New Lesson</button>
+        <button routerLink="new"
+                [queryParams]="{courseId: (course$ | async)?.$key}">
+            New Lesson
+        </button>
     </div>
 
 </div>

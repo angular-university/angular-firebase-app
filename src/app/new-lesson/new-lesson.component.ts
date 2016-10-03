@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {LessonsService} from "../shared/model/lessons.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-new-lesson',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewLessonComponent implements OnInit {
 
-  constructor() { }
+  courseId:string;
+
+  constructor(private lessonsService: LessonsService,
+                private route: ActivatedRoute) { }
+
 
   ngOnInit() {
+      this.courseId = this.route.snapshot.queryParams['courseId'];
+      console.log('course', this.courseId);
   }
+
+
+    save(form) {
+        this.lessonsService.createNewLesson(this.courseId, form.value)
+            .subscribe(
+                () => {
+                    alert("lesson created succesfully. Create another lesson ?");
+                    form.reset();
+                },
+                err => alert(`error creating lesson ${err}`)
+            );
+
+    }
 
 }
