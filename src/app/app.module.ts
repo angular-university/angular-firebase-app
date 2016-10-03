@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {firebaseConfig} from "../environments/firebase.config";
+import {firebaseConfig, authConfig} from "../environments/firebase.config";
 import {AngularFireModule} from "angularfire2/index";
 
 import 'rxjs/add/operator/map';
@@ -47,7 +47,7 @@ import {AuthService} from "./shared/security/auth.service";
   ],
   imports: [
     BrowserModule,
-      AngularFireModule.initializeApp(firebaseConfig),
+      AngularFireModule.initializeApp(firebaseConfig, authConfig),
       RouterModule.forRoot(routerConfig),
       ReactiveFormsModule
   ],
