@@ -32,7 +32,7 @@ export class LessonsService {
     loadNextLesson(courseId:string, lessonId:string):Observable<Lesson> {
         return this.db.list(`lessonsPerCourse/${courseId}`, {
             query: {
-                orderByKey: true,
+                orderByKey:true,
                 startAt: lessonId,
                 limitToFirst: 2
             }
@@ -46,7 +46,7 @@ export class LessonsService {
     loadPreviousLesson(courseId:string, lessonId:string):Observable<Lesson> {
         return this.db.list(`lessonsPerCourse/${courseId}`, {
             query: {
-                orderByKey: true,
+                orderByKey:true,
                 endAt: lessonId,
                 limitToLast: 2
             }
@@ -54,7 +54,19 @@ export class LessonsService {
         .map(results => results[0].$key)
         .switchMap(lessonId => this.db.object(`lessons/${lessonId}`))
         .map(Lesson.fromJson);
+
     }
 
 
 }
+
+
+
+
+
+
+
+
+
+
+

@@ -28,8 +28,6 @@ export class LessonDetailComponent implements OnInit {
         this.route.params.switchMap(
             params => {
 
-
-
                 const lessonUrl = params['id'];
 
                 return this.lessonsService.findLessonByUrl(lessonUrl);
@@ -42,24 +40,23 @@ export class LessonDetailComponent implements OnInit {
     }
 
     next() {
-
         this.lessonsService.loadNextLesson(this.lesson.courseId,this.lesson.$key)
-            .subscribe(this.nativateToLesson.bind(this));
-
+            .subscribe(this.navigateToLesson.bind(this));
     }
 
     previous() {
-
         this.lessonsService.loadPreviousLesson(this.lesson.courseId,this.lesson.$key)
-            .subscribe(this.nativateToLesson.bind(this));
-
-
+            .subscribe(this.navigateToLesson.bind(this));
     }
 
 
-    nativateToLesson(lesson:Lesson) {
-
+    navigateToLesson(lesson:Lesson) {
         this.router.navigate(['lessons', lesson.url]);
     }
+
+
+
+
+
 
 }
