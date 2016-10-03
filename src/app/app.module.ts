@@ -23,6 +23,8 @@ import { SafeUrlPipe } from './shared/security/safe-url.pipe';
 import {ReactiveFormsModule} from "@angular/forms";
 import { NewLessonComponent } from './new-lesson/new-lesson.component';
 import { LessonFormComponent } from './lesson-form/lesson-form.component';
+import { EditLessonComponent } from './edit-lesson/edit-lesson.component';
+import {LessonResolver} from "./shared/model/lesson.resolver";
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { LessonFormComponent } from './lesson-form/lesson-form.component';
     LessonDetailComponent,
     SafeUrlPipe,
     NewLessonComponent,
-    LessonFormComponent
+    LessonFormComponent,
+    EditLessonComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,7 @@ import { LessonFormComponent } from './lesson-form/lesson-form.component';
       RouterModule.forRoot(routerConfig),
       ReactiveFormsModule
   ],
-  providers: [LessonsService, CoursesService],
+  providers: [LessonsService, CoursesService, LessonResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -31,7 +31,9 @@ export class LessonsService {
                 equalTo: url
             }
         })
-            .map(results => Lesson.fromJson(results[0]));
+        .filter(results => results && results.length > 0)
+        .map(results => Lesson.fromJson(results[0]))
+        .do(console.log);
     }
 
 
