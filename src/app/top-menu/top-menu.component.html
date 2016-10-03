@@ -20,7 +20,7 @@
                *ngIf="!authInfo?.isLoggedIn()">Register</a>
         </li>
         <li>
-            <a *ngIf="authInfo?.isLoggedIn()">Logout</a>
+            <a *ngIf="authInfo?.isLoggedIn()" (click)="logout()">Logout</a>
         </li>
     </ul>
 

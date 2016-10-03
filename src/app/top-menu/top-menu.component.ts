@@ -25,4 +25,10 @@ export class TopMenuComponent implements OnInit {
 
   }
 
+
+    logout() {
+        this.authService.logout();
+    }
+
+
 }
