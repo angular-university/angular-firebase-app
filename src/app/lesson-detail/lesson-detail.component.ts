@@ -19,22 +19,22 @@ export class LessonDetailComponent implements OnInit {
                 private router:Router,
                 private lessonsService:LessonsService) {
 
+        console.log('lesson detail created');
+
 
     }
 
 
     ngOnInit() {
 
-        this.route.params.switchMap(
-            params => {
+        this.route.params.switchMap(params => {
 
-                const lessonUrl = params['id'];
+            const lessonUrl = params['id'];
 
-                return this.lessonsService.findLessonByUrl(lessonUrl);
-            }
-        )
-        .do(console.log)
+            return this.lessonsService.findLessonByUrl(lessonUrl);
+        })
         .subscribe(lesson => this.lesson = lesson);
+
 
 
     }
