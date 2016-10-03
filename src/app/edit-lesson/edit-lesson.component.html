@@ -1,5 +1,5 @@
 
-<lesson-form [initialValue]="lesson"></lesson-form>
+<lesson-form [initialValue]="lesson" #form></lesson-form>
 
 
-<button>Save Changes</button>
+<button (click)="save(form.value)">Save Changes</button>
