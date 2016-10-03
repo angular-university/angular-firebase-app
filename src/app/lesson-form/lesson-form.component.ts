@@ -1,7 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {validateUrl} from "../shared/validators/validateUrl";
-
 @Component({
   selector: 'lesson-form',
   templateUrl: './lesson-form.component.html',
@@ -9,45 +7,42 @@ import {validateUrl} from "../shared/validators/validateUrl";
 })
 export class LessonFormComponent implements OnInit {
 
-    form: FormGroup;
+    form:FormGroup;
 
-    @Input()
-    initialValue: any;
-
-    constructor(private fb: FormBuilder) {
+    constructor(private fb:FormBuilder) {
     }
 
     ngOnInit() {
         this.form = this.fb.group({
             description: ['',Validators.required],
             url: ['',Validators.required],
-            videoUrl: ['',[Validators.required, validateUrl]],
+            videoUrl: ['',[Validators.required]],
             tags: ['',Validators.required],
             longDescription: ['']
         });
-    }
 
-    ngOnChanges(changes) {
-        if (changes.initialValue) {
-            this.form.patchValue(changes.initialValue.currentValue);
-        }
     }
-
 
     isErrorVisible(field:string, error:string) {
-        return this.form.controls[field].dirty &&this.form.controls[field].errors && this.form.controls[field].errors[error];
+
+        return this.form.controls[field].dirty
+                && this.form.controls[field].errors &&
+                this.form.controls[field].errors[error];
+
     }
 
-    get value() {
-        return this.form.value;
+
+    reset() {
+        this.form.reset();
     }
+
 
     get valid() {
         return this.form.valid;
     }
 
-    reset() {
-        this.form.reset();
+    get value() {
+        return this.form.value;
     }
 
 }

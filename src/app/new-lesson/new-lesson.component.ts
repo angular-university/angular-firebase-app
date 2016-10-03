@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {LessonsService} from "../shared/model/lessons.service";
 import {ActivatedRoute} from "@angular/router";
+import {LessonsService} from "../shared/model/lessons.service";
+
 
 @Component({
   selector: 'app-new-lesson',
@@ -9,17 +10,16 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class NewLessonComponent implements OnInit {
 
-  courseId:string;
+    courseId:string;
 
-  constructor(private lessonsService: LessonsService,
-                private route: ActivatedRoute) { }
+  constructor(private route:ActivatedRoute, private lessonsService: LessonsService) { }
 
 
   ngOnInit() {
-      this.courseId = this.route.snapshot.queryParams['courseId'];
-      console.log('course', this.courseId);
-  }
 
+      this.courseId = this.route.snapshot.queryParams['courseId'];
+      console.log("course", this.courseId);
+  }
 
     save(form) {
         this.lessonsService.createNewLesson(this.courseId, form.value)
@@ -32,5 +32,7 @@ export class NewLessonComponent implements OnInit {
             );
 
     }
+
+
 
 }

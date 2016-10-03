@@ -1,5 +1,4 @@
 
 <lesson-form #form></lesson-form>
 
-<button (click)="save(form)" [disabled]="!form.valid">Save New Lesson</button>
-
+<button [disabled]="!form.valid" (click)="save(form)">Save New Lesson</button>
