@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {Observable, Subject, BehaviorSubject} from "rxjs/Rx";
 import {FirebaseAuth, FirebaseAuthState} from "angularfire2/index";
 import {AuthInfo} from "./auth-info";
+import {Router} from "@angular/router";
 
 @Injectable()
 export class AuthService {
@@ -12,7 +13,7 @@ export class AuthService {
   authInfo$: BehaviorSubject<AuthInfo> = new BehaviorSubject<AuthInfo>(AuthService.UNKNOWN_USER);
 
 
-  constructor(private auth: FirebaseAuth) {
+  constructor(private auth: FirebaseAuth, private router:Router) {
 
   }
 
@@ -50,6 +51,7 @@ export class AuthService {
     logout() {
         this.auth.logout();
         this.authInfo$.next(AuthService.UNKNOWN_USER);
+        this.router.navigate(['/home']);
 
     }
 
