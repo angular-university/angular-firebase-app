@@ -31,6 +31,12 @@ export class AuthService {
 
 
 
+    /*
+     *
+     * This is a demo on how we can 'Observify' any asynchronous interaction
+     *
+     *
+     * */
 
     fromFirebaseAuthPromise(promise):Observable<any> {
 
