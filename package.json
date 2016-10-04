@@ -22,6 +22,7 @@
     "@angular/platform-browser": "2.0.1",
     "@angular/platform-browser-dynamic": "2.0.1",
     "@angular/router": "3.0.0",
+    "@types/es6-promise": "0.0.32",
     "@types/lodash": "^4.14.36",
     "@types/request": "0.0.30",
     "angularfire2": "^2.0.0-beta.4",
