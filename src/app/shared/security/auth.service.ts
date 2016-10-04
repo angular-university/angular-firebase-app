@@ -21,10 +21,15 @@ export class AuthService {
 
 
     login(email, password):Observable<FirebaseAuthState> {
-
         return this.fromFirebaseAuthPromise(this.auth.login({email, password}));
-
     }
+
+
+    signUp(email, password) {
+        return this.fromFirebaseAuthPromise(this.auth.createUser({email, password}));
+    }
+
+
 
 
     fromFirebaseAuthPromise(promise):Observable<any> {
