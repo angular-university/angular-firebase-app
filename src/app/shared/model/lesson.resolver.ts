@@ -19,10 +19,8 @@ export class LessonResolver implements Resolve<Lesson> {
     resolve(route:ActivatedRouteSnapshot,
             state:RouterStateSnapshot):Observable<Lesson> {
 
-        console.log("params",route.params['id']);
-
         return this.lessonsService
-            .findLessonByUrl("angular2-hello-world-write-first-application")
+            .findLessonByUrl(route.params['id'])
             .first();
     }
 
