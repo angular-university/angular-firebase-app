@@ -125,6 +125,15 @@ export class LessonsService {
     }
 
 
+    requestLessonDeletion(lessonId:string, courseId:string) {
+        this.sdkDb.child('queue/tasks').push({lessonId, courseId})
+            .then(
+                () => alert('lesson deletion requested !')
+            );
+    }
+
+
+
 }
 
 
