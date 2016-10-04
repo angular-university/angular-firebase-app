@@ -1,12 +1,12 @@
 
 import {firebaseConfig} from "./src/environments/firebase.config";
 import {initializeApp, auth,database} from 'firebase';
+var Queue = require('firebase-queue');
 
 
 console.log('Running batch server ...');
 
 initializeApp(firebaseConfig);
-
 
 auth()
     .signInWithEmailAndPassword('admin@angular-university.io', 'test123')
@@ -18,39 +18,53 @@ function onError(err) {
     process.exit();
 }
 
+
 function runConsumer() {
+
     console.log("Running consumer ...");
 
-    var Queue = require('firebase-queue');
-    var queueRef = database().ref('queue');
+    const lessonsRef = database().ref("lessons");
+    const lessonsPerCourseRef = database().ref("lessonsPerCourse");
 
-    var lessonsRef = database().ref("lessons");
-    var lessonsPerCourseRef = database().ref("lessonsPerCourse");
+    const queueRef = database().ref('queue');
 
 
-    var queue = new Queue(queueRef, function(data, progress, resolve, reject) {
+    const queue = new Queue(queueRef, function(data, progress, resolve, reject) {
 
         console.log('received delete request ...',data);
 
         const deleteLessonPromise = lessonsRef.child(data.lessonId).remove();
 
-        const deleteLessonPerCourseRef =
+        const deleteLessonPerCoursePromise =
             lessonsPerCourseRef.child(`${data.courseId}/${data.lessonId}`).remove();
 
-        Promise.all([deleteLessonPromise, deleteLessonPerCourseRef])
+        Promise.all([deleteLessonPromise, deleteLessonPerCoursePromise])
             .then(
-                function() {
+                () => {
                     console.log("lesson deleted");
                     resolve();
                 }
-            ).catch(function() {
+            )
+            .catch(() => {
             console.log("lesson deletion in error");
             reject();
         });
 
+
     });
 
+
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
