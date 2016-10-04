@@ -29,8 +29,6 @@ export class AuthService {
         return this.fromFirebaseAuthPromise(this.auth.createUser({email, password}));
     }
 
-
-
     /*
      *
      * This is a demo on how we can 'Observify' any asynchronous interaction
