@@ -55,7 +55,13 @@ export class LessonDetailComponent implements OnInit {
     }
 
 
-
+    delete() {
+        this.lessonsService.deleteLesson(this.lesson.$key)
+            .subscribe(
+                () => alert('Lesson deleted'),
+                console.error
+            );
+    }
 
 
 

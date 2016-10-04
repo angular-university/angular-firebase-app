@@ -2,6 +2,8 @@ import {Injectable, Inject} from '@angular/core';
 import {Observable, Subject} from "rxjs/Rx";
 import {Lesson} from "./lesson";
 import {AngularFireDatabase, FirebaseRef} from "angularfire2";
+import {Http} from "@angular/http";
+import {firebaseConfig} from "../../../environments/firebase.config";
 
 
 @Injectable()
@@ -9,7 +11,8 @@ export class LessonsService {
 
     sdkDb:any;
 
-    constructor(private db:AngularFireDatabase, @Inject(FirebaseRef) fb) {
+    constructor(private db:AngularFireDatabase, @Inject(FirebaseRef) fb,
+                private http:Http) {
 
         this.sdkDb = fb.database().ref();
 
@@ -113,6 +116,13 @@ export class LessonsService {
 
     }
 
+
+    deleteLesson(lessonId:string): Observable<any> {
+
+        const url = firebaseConfig.databaseURL + '/lessons/' + lessonId + '.json';
+
+        return this.http.delete(url);
+    }
 
 
 }
