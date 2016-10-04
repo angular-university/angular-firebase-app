@@ -34,7 +34,8 @@ function runConsumer() {
 
         const deleteLessonPromise = lessonsRef.child(data.lessonId).remove();
 
-        const deleteLessonPerCourseRef = lessonsPerCourseRef.child(data.courseId + '/' + data.lessonId).remove();
+        const deleteLessonPerCourseRef =
+            lessonsPerCourseRef.child(`${data.courseId}/${data.lessonId}`).remove();
 
         Promise.all([deleteLessonPromise, deleteLessonPerCourseRef])
             .then(
