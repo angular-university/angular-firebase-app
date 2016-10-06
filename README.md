@@ -3,9 +3,9 @@
 
 This repository contains the full application of the course Angular and Firebase - Build a Web Application, so this contains the complete application like it will look like at the end of the course. 
 
-If you are looking for a clean starting point for coding along as you follow the course, please check this [repository](https://github.com/angular-university/angular-firebase-app-starter) instead.
+# Looking for a clean starting point ? 
 
-# Looking for a clean starting 
+If you are looking for a clean starting point for coding along as you follow the course, please check this [repository](https://github.com/angular-university/angular-firebase-app-starter) instead.
 
 
 # Installation pre-requisites
