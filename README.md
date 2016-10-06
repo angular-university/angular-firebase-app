@@ -27,7 +27,9 @@ With the following command the angular-cli will be installed globally in your ma
 
 # Installing the code
 
-The code can be installed 
+The code can be installed with the following command (needs to be run in the folder where package.json is):
+
+    npm install 
 
 
 ## Running the code
