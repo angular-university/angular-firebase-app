@@ -48,6 +48,7 @@ export class LessonsService {
                 limitToFirst: 2
             }
         })
+        .filter(results => results && results.length > 0) 
         .map(results => results[1].$key)
         .switchMap(lessonId => this.db.object(`lessons/${lessonId}`))
         .map(Lesson.fromJson);
