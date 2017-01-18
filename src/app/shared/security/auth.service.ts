@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable, Subject, BehaviorSubject} from "rxjs/Rx";
-import {FirebaseAuth, FirebaseAuthState} from "angularfire2/index";
+import {AngularFireAuth, FirebaseAuthState} from "angularfire2";
 import {AuthInfo} from "./auth-info";
 import {Router} from "@angular/router";
 
@@ -13,7 +13,7 @@ export class AuthService {
   authInfo$: BehaviorSubject<AuthInfo> = new BehaviorSubject<AuthInfo>(AuthService.UNKNOWN_USER);
 
 
-  constructor(private auth: FirebaseAuth, private router:Router) {
+  constructor(private auth: AngularFireAuth, private router:Router) {
 
   }
 
