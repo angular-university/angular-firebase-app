@@ -3,6 +3,8 @@
 
 This repository contains the full application of the course Angular and Firebase - Build a Web Application, so this contains the complete application like it will look like at the end of the course. 
 
+[Angular and Firebase - Build a Web Application](https://angular-university.io/course/build-an-application-with-angular2)
+
 ![Angular firebase course](https://angular-academy.s3.amazonaws.com/thumbnails/angular_app-firebase-small.jpg)
 
 # Looking for the course starting repo ? 
@@ -14,7 +16,9 @@ If you are looking for a clean starting point for coding along as you follow the
 
 If you are looking for the Complete Typescript 2 Course - Build a REST API, the repo with the full code can be found here:
 
-[Complete Typescript 2 Course - Build A REST API](https://github.com/angular-university/complete-typescript-course)
+[Complete Typescript 2 Course - Build A REST API](https://angular-university.io/course/typescript-2-tutorial)
+
+[Github repo for this course](https://github.com/angular-university/complete-typescript-course)
 
 ![Complete Typescript Course](https://angular-academy.s3.amazonaws.com/thumbnails/typescript-2-small.png)
 
@@ -23,7 +27,9 @@ If you are looking for the Complete Typescript 2 Course - Build a REST API, the 
 
 If you are looking for the Angular Ngrx Reactive Extensions Architecture Course code, the repo with the full code can be found here:
 
-[Angular Ngrx Reactive Extensions Architecture Course](https://github.com/angular-university/ngrx-course)
+[Angular Ngrx Reactive Extensions Architecture Course](https://angular-university.io/course/angular2-ngrx)
+
+[Github repo for this course](https://github.com/angular-university/ngrx-course)
 
 ![Angular Ngrx Course](https://angular-academy.s3.amazonaws.com/thumbnails/ngrx-angular.png)
 
