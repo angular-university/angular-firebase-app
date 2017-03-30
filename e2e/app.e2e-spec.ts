@@ -1,10 +1,10 @@
-import { FinalProjectPage } from './app.po';
+import { Ng4CliPage } from './app.po';
 
-describe('final-project App', function() {
-  let page: FinalProjectPage;
+describe('ng4-cli App', () => {
+  let page: Ng4CliPage;
 
   beforeEach(() => {
-    page = new FinalProjectPage();
+    page = new Ng4CliPage();
   });
 
   it('should display message saying app works', () => {

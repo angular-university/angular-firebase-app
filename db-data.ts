@@ -2,22 +2,22 @@ export const dbData = {
   "courses": [
     {
       "url": "getting-started-with-angular2",
-      "description": "Angular 2 Tutorial For Beginners",
+      "description": "Angular Tutorial For Beginners",
       "iconUrl": "https://angular-academy.s3.amazonaws.com/thumbnails/angular2-for-beginners.jpg",
       "courseListIcon": "https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png",
-      "longDescription": "Establish a solid layer of fundamentals, learn what's under the hood of Angular 2",
+      "longDescription": "Establish a solid layer of fundamentals, learn what's under the hood of Angular",
       "lessons": [
         {
           "url": "angular2-hello-world-write-first-application",
-          "description": "Angular 2 Tutorial For Beginners - Build Your First App - Hello World Step By Step",
+          "description": "Angular Tutorial For Beginners - Build Your First App - Hello World Step By Step",
           "duration": "2:49",
           "tags": "BEGINNER",
           videoUrl: "https://www.youtube.com/embed/du6sKwEFrhQ",
-          "longDescription": "This is step by step guide to create your first Angular 2 application. Its aimed at beginners just starting out with the framework.This lesson will show how to create a component, and how to link the component to a given custom HTML tag. It will show how to give the component a given template."
+          "longDescription": "This is step by step guide to create your first Angular application. Its aimed at beginners just starting out with the framework.This lesson will show how to create a component, and how to link the component to a given custom HTML tag. It will show how to give the component a given template."
         },
         {
           "url": "angular2-build-your-first-component",
-          "description": "Building Your First Angular 2 Component - Component Composition",
+          "description": "Building Your First Angular Component - Component Composition",
           "duration": "2:07",
           "tags": "BEGINNER",
           videoUrl: "https://www.youtube.com/embed/VES1eTNxi1s",
@@ -25,15 +25,15 @@ export const dbData = {
         },
         {
           "url": "angular2-passing-data-to-component-using-input",
-          "description": "Component @Input - How To Pass Input Data To an Angular 2 Component",
+          "description": "Component @Input - How To Pass Input Data To an Angular Component",
           "duration": "2:33",
           "tags": "BEGINNER",
           "videoUrl": "https://www.youtube.com/embed/Yfebo2mFrTU",
-          "longDescription": "In this lesson we are going to learn how to use the Angular 2 template syntax for properties, and learn how we can use it to pass input data to a component. We are going to see also a simplified input syntax for passing constant strings as component inputs."
+          "longDescription": "In this lesson we are going to learn how to use the Angular template syntax for properties, and learn how we can use it to pass input data to a component. We are going to see also a simplified input syntax for passing constant strings as component inputs."
         },
         {
           "url": "angular2-component-events",
-          "description": "Angular 2 Component Events - Using @Output to create custom events",
+          "description": "Angular Component Events - Using @Output to create custom events",
           "duration": "4:44",
           "tags": "BEGINNER",
           videoUrl: "https://www.youtube.com/embed/dgyVrJ2XCq4",
@@ -41,23 +41,23 @@ export const dbData = {
         },
         {
           "url": "angular2-component-templates-internal-vs-external",
-          "description": "Angular 2 Component Templates - Inline Vs External",
+          "description": "Angular Component Templates - Inline Vs External",
           "duration": "2:55",
           "tags": "BEGINNER",
           "pro": true,
-          "longDescription": "In this lesson we are going to learn how a component template can be defined both inline and in an external file. We are going to learn how to configure the component so that Angular can find the template at the correct location, using the module commonjs variable. We are going to learn also some best practices for component naming, from the official Angular 2 Style Guide."
+          "longDescription": "In this lesson we are going to learn how a component template can be defined both inline and in an external file. We are going to learn how to configure the component so that Angular can find the template at the correct location, using the module commonjs variable. We are going to learn also some best practices for component naming, from the official Angular Style Guide."
         },
         {
           "url": "angular2-components-styling-component-isolation",
-          "description": "Styling Angular 2 Components - Learn About Component Style Isolation",
+          "description": "Styling Angular Components - Learn About Component Style Isolation",
           "duration": "3:27",
           "tags": "BEGINNER",
           "pro": true,
-          "longDescription": "In this lesson we are going to learn how components can be styled using both inline styles and an external css file. We will learn some more best practices on file naming. We will learn how the mechanism for style isolation works in Angular 2."
+          "longDescription": "In this lesson we are going to learn how components can be styled using both inline styles and an external css file. We will learn some more best practices on file naming. We will learn how the mechanism for style isolation works in Angular."
         },
         {
           "url": "angular2-components-component-interaction",
-          "description": "Angular 2 Component Interaction - Extended Components Example",
+          "description": "Angular Component Interaction - Extended Components Example",
           "duration": "9:22",
           "pro": true,
           "tags": "BEGINNER",
@@ -65,7 +65,7 @@ export const dbData = {
         },
         {
           "url": "angular2-components-exercise",
-          "description": "Angular 2 Components Tutorial For Beginners - Components Exercise !",
+          "description": "Angular Components Tutorial For Beginners - Components Exercise !",
           "duration": "1:26",
           "tags": "BEGINNER",
           "pro": true,
@@ -73,7 +73,7 @@ export const dbData = {
         },
         {
           "url": "angular2-components-exercise-solution",
-          "description": "Angular 2 Components Tutorial For Beginners - Components Exercise Solution Inside",
+          "description": "Angular Components Tutorial For Beginners - Components Exercise Solution Inside",
           "duration": "2:08",
           "tags": "BEGINNER",
           "pro": true,
@@ -81,14 +81,14 @@ export const dbData = {
         },
         {
           "url": "angular2-directives-inputs-outputs-event-emitters",
-          "description": "Angular 2 Directives - Inputs, Output Event Emitters and How To Export Template References",
+          "description": "Angular Directives - Inputs, Output Event Emitters and How To Export Template References",
           "duration": "4:01",
           "tags": "BEGINNER",
           "pro": true,
-          "longDescription": "Angular 2 Components are actually simply just Directives. All the functionality that we have learned so far about Components also applies to Directives. In this lesson we are going to learn how to Directives can also have inputs and outputs, and how the use of the decorators @Input and @Output also applies to directives. We are also learn a new functionality for exporting a template reference for the directive itself into the template on which the directive is being used. "
+          "longDescription": "Angular Components are actually simply just Directives. All the functionality that we have learned so far about Components also applies to Directives. In this lesson we are going to learn how to Directives can also have inputs and outputs, and how the use of the decorators @Input and @Output also applies to directives. We are also learn a new functionality for exporting a template reference for the directive itself into the template on which the directive is being used. "
         },
         {
-          "description": "Angular 2 Core Directives  - ngFor",
+          "description": "Angular Core Directives  - ngFor",
           "duration": "3:46",
           "url": "angular2-core-directives-ngfor",
           "tags": "BEGINNER",
@@ -96,7 +96,7 @@ export const dbData = {
           "longDescription": "This is an overview on the ngFor core directive, how it works and some common use cases on how it should be used to build templates. It demonstrates how ngFor can be used with any iterable and not only arrays, and how to use together with other mechanisms of the framework like @ContentChildren."
         },
         {
-          "description": "Angular 2 Core Directives - ngClass and ngStyle",
+          "description": "Angular Core Directives - ngClass and ngStyle",
           "duration": "3:15",
           "url": "angular2-core-directives-ngclass-ngstyle",
           "tags": "BEGINNER",
@@ -104,7 +104,7 @@ export const dbData = {
           "longDescription": "This lesson is an overview on how to use the ngClass and ngStyle Directives, when to use which, and alternative syntax in case we only to modify one property/style."
         },
         {
-          "description": "Angular 2 Core Directives - ngIf",
+          "description": "Angular Core Directives - ngIf",
           "duration": "3:56",
           "url": "angular2-core-directives-ngIf",
           "tags": "BEGINNER",
@@ -117,18 +117,18 @@ export const dbData = {
           "duration": "7:58",
           "tags": "BEGINNER",
           "pro": true,
-          "longDescription": "This lesson is an extended tour on Angular 2 directives. This is an extremely powerful feature of Angular 2 that often remains underused. Its super powerful and and if used correctly can be used to create functionality that is much more reusable than components themselves."
+          "longDescription": "This lesson is an extended tour on Angular directives. This is an extremely powerful feature of Angular that often remains underused. Its super powerful and and if used correctly can be used to create functionality that is much more reusable than components themselves."
         },
         {
-          "description": "Introduction to Angular 2 Directives - Exercise - Improve the Collapsible Directive",
+          "description": "Introduction to Angular Directives - Exercise - Improve the Collapsible Directive",
           "duration": "1:30",
           "url": "angular2-directives-exercise-improve-collapsible-directive",
           "tags": "BEGINNER",
           "pro": true,
-          "longDescription": "In this video we are going to present the exercise for the Introduction To Directives section. The goal of the exercise is to take the learned functionality about how to build a custom directive and how to use the standard Angular 2 Core directives to build an improved version of the collapse-on-click directive."
+          "longDescription": "In this video we are going to present the exercise for the Introduction To Directives section. The goal of the exercise is to take the learned functionality about how to build a custom directive and how to use the standard Angular Core directives to build an improved version of the collapse-on-click directive."
         },
         {
-          "description": "Introduction to Angular 2 Directives - Exercise Solution",
+          "description": "Introduction to Angular Directives - Exercise Solution",
           "duration": "2:40",
           "url": "angular2-directives-exercise-solution-improve-collapsible-directive",
           "tags": "BEGINNER",
@@ -139,7 +139,7 @@ export const dbData = {
     },
     {
       "url": "angular2-http",
-      "description": "Angular 2 HTTP and Services",
+      "description": "Angular HTTP and Services",
       "longDescription": "<p class='course-description'>Build Services using Observables, learn to use the HTTP module effectively.",
       "iconUrl": "https://angular-academy.s3.amazonaws.com/thumbnails/services-and-http.jpg",
       "courseListIcon": "https://angular-academy.s3.amazonaws.com/course-logos/observables_rxjs.png",
@@ -150,7 +150,7 @@ export const dbData = {
           "url": "angular2-what-is-an-observable",
           "tags": "BEGINNER",
           "videoUrl": "https://www.youtube.com/embed/Sol2uLolmUM",
-          "longDescription": "In this lesson we are going to present a couple of baseline concepts that are essential for being able to build service layers in Angular 2: we will introduce the notions of stream and Observable. We are going to understand that these are two  different concepts: an Observable is not a stream. During the lesson we will write our first Observable and we will learn one of the main properties of Observables: that they are inherently inert, and that we need to subscribe to them in order for them to work. We are also going to introduce our first RxJs operator: the do operator which should only be used for debugging purposes as it introduces side effects."
+          "longDescription": "In this lesson we are going to present a couple of baseline concepts that are essential for being able to build service layers in Angular: we will introduce the notions of stream and Observable. We are going to understand that these are two  different concepts: an Observable is not a stream. During the lesson we will write our first Observable and we will learn one of the main properties of Observables: that they are inherently inert, and that we need to subscribe to them in order for them to work. We are also going to introduce our first RxJs operator: the do operator which should only be used for debugging purposes as it introduces side effects."
         },
         {
           "description": "Observables Error Handling and Completion - How do Observables handle Errors?",
@@ -161,11 +161,11 @@ export const dbData = {
           "longDescription": "In this lesson we are going to present two other foundation concepts of Observables: error handling and completion. We are going to initially call our backend server using the browser Fetch API, which is promises based. We will then learn how to create an Observable from a promise, and see how and why an observable is a good way to model a network call. We will learn about some advantages of Observables vs Promises."
         },
         {
-          "description": "How does Angular 2 HTTP use Observables ? The HTTP Response object",
+          "description": "How does Angular HTTP use Observables ? The HTTP Response object",
           "duration": "4:32",
           "url": "how-does-angular2-use-observables-http-response-object",
           "tags": "BEGINNER",
-          "longDescription": "In this lesson we are going to learn the relation between the Angular 2 HTTP module and Observables, and how its essential to understand Observables in order to do even the most common backend-communication tasks using the HTTP module. We are going to learn how Angular 2 HTTP models network responses using Observables, and how completion is handled. "
+          "longDescription": "In this lesson we are going to learn the relation between the Angular HTTP module and Observables, and how its essential to understand Observables in order to do even the most common backend-communication tasks using the HTTP module. We are going to learn how Angular HTTP models network responses using Observables, and how completion is handled. "
         },
         {
           "description": "How to use Observables and HTTP to build a Service Layer",
@@ -173,7 +173,7 @@ export const dbData = {
           "url": "angular2-how-to-use-observables-and-http-to-build-a-servicelayer",
           "tags": "BEGINNER",
           "videoUrl": "",
-          "longDescription": "In this lesson we are going to learn how to use Angular 2 HTTP to build the service layer of our application. We are going to learn how to build strongly typed services and we are going to learn how the service layer can be designed around the notion of Observables."
+          "longDescription": "In this lesson we are going to learn how to use Angular HTTP to build the service layer of our application. We are going to learn how to build strongly typed services and we are going to learn how the service layer can be designed around the notion of Observables."
         },
         {
           "description": "Introduction to Functional Reactive Programming - Using the Async Pipe - Pitfalls to Avoid",
@@ -200,12 +200,12 @@ export const dbData = {
           "longDescription": "In this lesson we are going to learn that Observables can be combined with other Observables. In this case we are going to create an Observable of mouse moves that only emits if the mouse is bellow a certain region of the page. We are also going to create an Observable of mouse clicks, that emits if the user clicks anywhere on the page - both of these Observables will be created using fromEvent. We will then combine these two Observables to create third Observable using the RxJs combineLatests operator. "
         },
         {
-          "description": "Avoid the Biggest Pitfall of Angular 2 HTTP - Learn the RxJs Cache Operator",
+          "description": "Avoid the Biggest Pitfall of Angular HTTP - Learn the RxJs Cache Operator",
           "duration": "5:10",
           "url": "angular2-how-to--aAvoid-duplicate-http-requests-rxjs-cache-operator",
           "tags": "INTERMEDIATE",
           "pro": true,
-          "longDescription": "In this lesson we are going to use the HTTP module to implement a modification operation: we are going to add a lesson to a lessons list via an HTTP POST call, and then reload the data from the server.  While implementing this simple use case, we are going to come across something that might be surprising at first: its really simple to do duplicate network calls accidentally while using Angular 2 HTTP. We are going to learn the reason why that is the case, and learn how we can avoid that using the RxJs Cache Operator."
+          "longDescription": "In this lesson we are going to use the HTTP module to implement a modification operation: we are going to add a lesson to a lessons list via an HTTP POST call, and then reload the data from the server.  While implementing this simple use case, we are going to come across something that might be surprising at first: its really simple to do duplicate network calls accidentally while using Angular HTTP. We are going to learn the reason why that is the case, and learn how we can avoid that using the RxJs Cache Operator."
         },
         {
           "description": "How to do multiple HTTP requests using the RxJs Concat Operator",
@@ -213,7 +213,7 @@ export const dbData = {
           "url": "angular2-how-to-do-multiple-http-requests-using-the-rxjs-concat-operator",
           "tags": "INTERMEDIATE",
           "pro": true,
-          "longDescription": "In this lesson we are going to learn how we make multiple sequential requests to the server by using the RxJs Concat operator. This is another example of how from the point of view of the Angular 2 HTTP module network requests are really just Observables that can be easily combined using the many RxJs operators available. We are going to implement the following concrete example: do a delete on the server, then a second delete and finally reload the new list from the server and display it on the screen."
+          "longDescription": "In this lesson we are going to learn how we make multiple sequential requests to the server by using the RxJs Concat operator. This is another example of how from the point of view of the Angular HTTP module network requests are really just Observables that can be easily combined using the many RxJs operators available. We are going to implement the following concrete example: do a delete on the server, then a second delete and finally reload the new list from the server and display it on the screen."
         },
         {
           "description": "How to do two HTTP Requests in Parallel using the RxJs combineLatest Operator",
@@ -221,7 +221,7 @@ export const dbData = {
           "url": "angular2-how-to-do-two-http-requests-in-parallel-using-the-rxjs-combinelatest-operator",
           "tags": "INTERMEDIATE",
           "pro": true,
-          "longDescription": "In this lesson we are going to learn how to do two HTTP requests in parallel, wait for each to return and produce a result that contains the combination of the two HTTP calls. For that we are going to use an operator that we presented before, the combineLatest Operator which will in this time be used in a completely different context. This is a good example of the power of the approach that the Angular 2 HTTP module gives us, by modeling network calls as Observables; any RxJs operator can potentially by used to process network calls."
+          "longDescription": "In this lesson we are going to learn how to do two HTTP requests in parallel, wait for each to return and produce a result that contains the combination of the two HTTP calls. For that we are going to use an operator that we presented before, the combineLatest Operator which will in this time be used in a completely different context. This is a good example of the power of the approach that the Angular HTTP module gives us, by modeling network calls as Observables; any RxJs operator can potentially by used to process network calls."
         },
         {
           "description": "How to setup an HTTP request sequence using the RxJs switchMap Operator",
@@ -253,7 +253,7 @@ export const dbData = {
           "url": "angular2-exercise-improve-a-search-service-and-build-a-typeahead",
           "tags": "INTERMEDIATE",
           "pro": true,
-          "longDescription": "This lesson is the setup for the exercise of the Services and HTTP series. We are going to implement a Typeahead that continuously retrieves from the backend new search results depending on what the use is typing. We are going to show how to use the Angular 2 HTTP API to pass a GET parameter request to the backend."
+          "longDescription": "This lesson is the setup for the exercise of the Services and HTTP series. We are going to implement a Typeahead that continuously retrieves from the backend new search results depending on what the use is typing. We are going to show how to use the Angular HTTP API to pass a GET parameter request to the backend."
         },
         {
           "description": "Exercise Solution - Learn How to build a Typeahead that cancels obsolete search requests",
