@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {AngularFire, FirebaseListObservable, FirebaseObjectObservable} from "angularfire2";
 
 
 @Component({
@@ -9,6 +8,5 @@ import {AngularFire, FirebaseListObservable, FirebaseObjectObservable} from "ang
 })
 export class AppComponent {
 
-    title = 'app works!';
 
 }

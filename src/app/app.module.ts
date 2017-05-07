@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {firebaseConfig, authConfig} from "../environments/firebase.config";
-import {AngularFireModule} from "angularfire2/index";
+import {firebaseConfig} from "../environments/firebase.config";
+import {AngularFireModule} from "angularfire2";
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
@@ -30,6 +30,8 @@ import { RegisterComponent } from './register/register.component';
 import {AuthService} from "./shared/security/auth.service";
 import {AuthGuard} from "./shared/security/auth.guard";
 import {HttpModule} from "@angular/http";
+import {AngularFireDatabaseModule} from "angularfire2/database";
+import {AngularFireAuthModule} from "angularfire2/auth";
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import {HttpModule} from "@angular/http";
   ],
   imports: [
     BrowserModule,
-      AngularFireModule.initializeApp(firebaseConfig, authConfig),
+      AngularFireModule.initializeApp(firebaseConfig),
+      AngularFireDatabaseModule,
+      AngularFireAuthModule,
       RouterModule.forRoot(routerConfig),
       ReactiveFormsModule,
       HttpModule

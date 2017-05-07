@@ -1,7 +1,8 @@
 import {Injectable, Inject} from '@angular/core';
 import {Observable, Subject} from "rxjs/Rx";
 import {Lesson} from "./lesson";
-import {AngularFireDatabase, FirebaseRef} from "angularfire2";
+import {AngularFireDatabase} from "angularfire2/database";
+import {FirebaseApp} from 'angularfire2';
 import {Http} from "@angular/http";
 import {firebaseConfig} from "../../../environments/firebase.config";
 
@@ -11,10 +12,10 @@ export class LessonsService {
 
     sdkDb:any;
 
-    constructor(private db:AngularFireDatabase, @Inject(FirebaseRef) fb,
+    constructor(private db:AngularFireDatabase, @Inject(FirebaseApp) fb: FirebaseApp,
                 private http:Http) {
 
-        this.sdkDb = fb.database().ref();
+        this.sdkDb = fb.database();
 
     }
 
