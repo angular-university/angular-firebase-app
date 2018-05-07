@@ -1,3 +1,5 @@
+
+import {tap} from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Lesson} from "../shared/model/lesson";
@@ -15,8 +17,8 @@ export class EditLessonComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private lessonsService: LessonsService) {
 
-      route.data
-          .do(console.log)
+      route.data.pipe(
+          tap(console.log))
           .subscribe(
           data => this.lesson = data['lesson']
       );

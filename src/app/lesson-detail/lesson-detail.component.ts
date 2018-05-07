@@ -1,3 +1,5 @@
+
+import {switchMap} from 'rxjs/operators';
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {LessonsService} from "../shared/model/lessons.service";
@@ -27,12 +29,12 @@ export class LessonDetailComponent implements OnInit {
 
     ngOnInit() {
 
-        this.route.params.switchMap(params => {
+        this.route.params.pipe(switchMap(params => {
 
             const lessonUrl = params['id'];
 
             return this.lessonsService.findLessonByUrl(lessonUrl);
-        })
+        }))
         .subscribe(lesson => this.lesson = lesson);
 
 

@@ -3,7 +3,7 @@
 
 This repository contains the full application of the course Angular and Firebase - Build a Web Application, so this contains the complete application like it will look like at the end of the course. 
 
-This course repository is updated to Angular v5, there is a Yarn lock file available.
+This course repository is updated to Angular 6, there is a Yarn lock file available.
 
 [Angular and Firebase - Build a Web Application](https://angular-university.io/course/build-an-application-with-angular2)
 

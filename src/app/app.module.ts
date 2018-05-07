@@ -5,9 +5,9 @@ import { AppComponent } from './app.component';
 import {firebaseConfig} from "../environments/firebase.config";
 import {AngularFireModule} from "angularfire2";
 
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/switchMap';
+
+
+
 
 import { HomeComponent } from './home/home.component';
 import {LessonsService} from "./shared/model/lessons.service";

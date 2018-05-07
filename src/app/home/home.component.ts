@@ -1,3 +1,5 @@
+
+import {tap} from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import {LessonsService} from "../shared/model/lessons.service";
 import {Lesson} from "../shared/model/lesson";
@@ -18,8 +20,8 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.lessonsService.findAllLessons()
-          .do(console.log)
+      this.lessonsService.findAllLessons().pipe(
+          tap(console.log))
           .subscribe(
               lessons => this.allLessons = this.filtered = lessons
           );

@@ -1,3 +1,5 @@
+
+import {switchMap, filter, map, tap} from 'rxjs/operators';
 import {Injectable, Inject} from '@angular/core';
 import {Observable, Subject} from "rxjs/Rx";
 import {Lesson} from "./lesson";
@@ -22,9 +24,9 @@ export class LessonsService {
 
     findAllLessons():Observable<Lesson[]> {
 
-        return this.db.list('lessons')
-            .do(console.log)
-            .map(Lesson.fromJsonList);
+        return this.db.list('lessons').pipe(
+            tap(console.log),
+            map(Lesson.fromJsonList),);
 
     }
 
@@ -34,10 +36,10 @@ export class LessonsService {
                 orderByChild: 'url',
                 equalTo: url
             }
-        })
-        .filter(results => results && results.length > 0)
-        .map(results => Lesson.fromJson(results[0]))
-        .do(console.log);
+        }).pipe(
+        filter(results => results && results.length > 0),
+        map(results => Lesson.fromJson(results[0])),
+        tap(console.log),);
     }
 
 
@@ -48,11 +50,11 @@ export class LessonsService {
                 startAt: lessonId,
                 limitToFirst: 2
             }
-        })
-        .filter(results => results && results.length > 0) 
-        .map(results => results[1].$key)
-        .switchMap(lessonId => this.db.object(`lessons/${lessonId}`))
-        .map(Lesson.fromJson);
+        }).pipe(
+        filter(results => results && results.length > 0), 
+        map(results => results[1].$key),
+        switchMap(lessonId => this.db.object(`lessons/${lessonId}`)),
+        map(Lesson.fromJson),);
     }
 
 
@@ -63,11 +65,11 @@ export class LessonsService {
                 endAt: lessonId,
                 limitToLast: 2
             }
-        })
-        .filter(results => results && results.length > 0)
-        .map(results => results[0].$key)
-        .switchMap(lessonId => this.db.object(`lessons/${lessonId}`))
-        .map(Lesson.fromJson);
+        }).pipe(
+        filter(results => results && results.length > 0),
+        map(results => results[0].$key),
+        switchMap(lessonId => this.db.object(`lessons/${lessonId}`)),
+        map(Lesson.fromJson),);
 
     }
 

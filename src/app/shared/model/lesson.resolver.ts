@@ -1,4 +1,6 @@
 
+import {first} from 'rxjs/operators';
+
 
 
 import {Resolve, ActivatedRouteSnapshot, RouterStateSnapshot} from "@angular/router";
@@ -20,8 +22,8 @@ export class LessonResolver implements Resolve<Lesson> {
             state:RouterStateSnapshot):Observable<Lesson> {
 
         return this.lessonsService
-            .findLessonByUrl(route.params['id'])
-            .first();
+            .findLessonByUrl(route.params['id']).pipe(
+            first());
     }
 
 }
